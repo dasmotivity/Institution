@@ -1,0 +1,46 @@
+<web-app>
+    <servlet>
+        <servlet-name>first</servlet-name>
+        <servlet-class>com.second.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    
+       <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>com.second.EmployeeRegistration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/employeeregistration</url-pattern>
+    </servlet-mapping>
+   
+      <servlet>
+        <servlet-name>third</servlet-name>
+        <servlet-class>com.second.StudentRegistration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>third</servlet-name>
+        <url-pattern>/studentregistration</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forth</servlet-name>
+        <servlet-class>com.second.EmployeeLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forth</servlet-name>
+        <url-pattern>/employeelogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>fifth</servlet-name>
+        <servlet-class>com.second.StudentLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fifth</servlet-name>
+        <url-pattern>/studentlogin</url-pattern>
+    </servlet-mapping>
+</web-app>
