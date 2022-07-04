@@ -14,6 +14,10 @@ public class Main {
     Session se = sf.openSession();
     Transaction tr = se.beginTransaction();
 
+    Payment p=new Payment();
+    p.setAmount(10000);
+    p.setPid(100);
+
     CreditCard cc = new CreditCard();
     cc.setCcType("MASTER CARD");
     cc.setAmount(19000);
@@ -24,6 +28,7 @@ public class Main {
     cq.setAmount(15000);
     cq.setCqType("AXIS");
 
+    se.save(p);
     se.save(cc);
     se.save(cq);
     tr.commit();

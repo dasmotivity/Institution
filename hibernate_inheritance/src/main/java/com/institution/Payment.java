@@ -4,12 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="payment")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="ptype",discriminatorType =DiscriminatorType.STRING,length = 20)
-
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Payment {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="pid")
+    private int pid;
+    @Column(name="amount")
+    private double amount;
 
 
     public int getPid() {
@@ -27,13 +30,8 @@ public class Payment {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-    @Id
-    @Column(name="pid")
 
-    private int pid;
-    @Column(name="amount")
 
-    private double amount;
 
 
 }

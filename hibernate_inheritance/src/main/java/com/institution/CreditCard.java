@@ -1,13 +1,15 @@
 package com.institution;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
-@DiscriminatorValue("credit_card")
+@Table(name="CreditCard")
 public class CreditCard extends Payment{
+
+    @Column(name="cctype")
+    private String ccType;
+
+
     public String getCcType() {
         return ccType;
     }
@@ -15,6 +17,5 @@ public class CreditCard extends Payment{
     public void setCcType(String ccType) {
         this.ccType = ccType;
     }
-    @Column(name="cctype")
-    private String ccType;
+
 }

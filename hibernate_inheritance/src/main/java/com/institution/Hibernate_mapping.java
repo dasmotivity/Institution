@@ -27,7 +27,7 @@ public class Hibernate_mapping {
 
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
-                settings.put(Environment.HBM2DDL_AUTO, "update8");
+                settings.put(Environment.HBM2DDL_AUTO, "update");
 
                 configuration.setProperties(settings);
 
